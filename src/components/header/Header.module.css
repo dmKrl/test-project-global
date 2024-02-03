@@ -1,0 +1,46 @@
+.header {
+    height: 400px;
+    background-image: url("../../../public/image/catalog_pict.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.headerWrapper {
+    height: 76px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 63px;
+}
+.headerLogo a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: white;
+}
+.headerBlock {
+}
+.headerHeading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70px;
+    color: white;
+    max-width: 792px;
+}
+.nav {
+    display: flex;
+    gap: 32px;
+}
+.nav a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}

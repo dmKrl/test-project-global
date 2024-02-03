@@ -1,20 +1,24 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
-  return <div>
+    return (
         <div>
             <div>
-                <h4></h4>
-                <a href=""></a>
-                <a href=""></a>
+                <div>
+                    <h4>Интерьер</h4>
+                    <Link to="/"></Link>
+                    <Link to="/"></Link>
+                </div>
             </div>
-        </div>
-        <div>
-            <h4>Контакты</h4>
             <div>
-                <a href=""></a>
-                <a href=""></a>
+                <h4>Контакты</h4>
+                <div>
+                    <Link to="/"></Link>
+                    <Link to="/"></Link>
+                </div>
             </div>
         </div>
-  </div>;
+    );
 };
 
 export default Footer;
