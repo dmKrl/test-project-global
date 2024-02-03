@@ -1,0 +1,213 @@
+.cart {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+    padding-top: 25px;
+    margin-top: 64px;
+}
+.cartContent {
+    grid-column: span 8;
+}
+.cardDescription {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 14px;
+}
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 0.5px solid #cacdd8;
+    padding-top: 25px;
+    padding-bottom: 32px;
+}
+.CardLeft {
+    display: flex;
+    gap: 32px;
+}
+.CardLeft img {
+    width: 173px;
+    height: 173px;
+}
+.cartInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 276px;
+}
+.cardName {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+.cartText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #888888;
+}
+.cartPrice {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #050505;
+}
+.cartBlock {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 210%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    gap: 30px;
+}
+.cartButton {
+    color: #000000;
+    text-decoration-line: none;
+}
+.cartButton:hover {
+    text-decoration: underline;
+}
+.cartInput {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: #f7f6f6;
+    border-radius: 6px;
+    border-style: none;
+    width: 71px;
+    height: 51px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 210%;
+    color: #000000;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+.cartOrder {
+    padding-top: 42px;
+    padding-left: 27px;
+    padding-right: 32px;
+    background: #f7f6f6;
+    border-radius: 20px;
+    height: 556px;
+    grid-column: span 4;
+}
+.cartHeading {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #000000;
+}
+.form {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 41px;
+}
+.formInput {
+    min-width: 260px;
+    transition: all 0.3s;
+    outline: none;
+    padding-bottom: 3px;
+    border: none;
+    border-bottom: 1px solid #cacdd8;
+    background: transparent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}
+.formInput::placeholder {
+    color: #8e8e8e;
+}
+.formInput:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 5px #ccc;
+}
+.formResult {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    text-align: center;
+    margin-top: 23px;
+    margin-bottom: 18px;
+}
+.formSubmit {
+    width: 200px;
+    height: 37px;
+    font-style: normal;
+    font-weight: 400px;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    color: #000000;
+}
+.formSubmit:hover {
+    transition: all 0.4s;
+    animation: zoom 0.5s ease-out 0s 1 normal forwards;
+    background: #000000;
+    color: #ffffff;
+}
+
+.cartButtonBox {
+    display: flex;
+    gap: 7px;
+    margin-top: 18px;
+}
+
+.heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+.productBox {
+    padding-top: 64px;
+}
+.productContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.middleCatalogBlock {
+    padding-top: 39px;
+}
+.middleCatalog a:hover {
+    text-decoration: none;
+}
+.middleCatalogBlock a {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #000000;
+}
