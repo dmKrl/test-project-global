@@ -18,7 +18,11 @@ const Header = () => {
                 </nav>
             </div>
             <div className={s.headerBlock}>
-                <h1 className={s.headerHeading}>Каталог</h1>
+                {location.pathname === "/" ? (
+                    <h1 className={s.headerHeading}>Каталог</h1>
+                ) : (
+                    <h1 className={s.headerHeading}>Корзина</h1>
+                )}
             </div>
         </div>
     );
