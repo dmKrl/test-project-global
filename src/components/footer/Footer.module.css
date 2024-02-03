@@ -1,0 +1,48 @@
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    block-size: cover;
+    justify-content: space-between;
+    background-position: center;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    margin-top: 64px;
+    background: #f7f6f6;
+}
+.footerLogo a {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    color: #000;
+}
+.footerInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 789px;
+}
+.footerItem {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footerHeading {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.footerNav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footerNav a {
+    color: #888;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
