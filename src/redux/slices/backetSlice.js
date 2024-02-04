@@ -16,16 +16,17 @@ const backetSlice = createSlice({
                 : state.productBacket.push(action.payload);
         },
         setFullPrice: (state, action) => {
+            console.log(action.payload);
             state.fullPrice += Number(action.payload);
+        },
+        clearAllProductBacket: (state) => {
+            state.fullPrice = 0;
+            state.productBacket = [];
         },
         setProductBacket: (state, action) => {
             state.productBacket.includes(action.payload)
                 ? ""
                 : state.productBacket.push(action.payload);
-        },
-        clearAllProductBacket: (state) => {
-            state.fullPrice = 0;
-            state.productBacket = [];
         },
     },
 });

@@ -2,18 +2,14 @@ import { Link } from "react-router-dom";
 import s from "../../../pages/catalog-page/CatalogPage.module.css";
 import { useDispatch } from "react-redux";
 import {
-    setFullPrice,
     setProductBacket,
 } from "../../../redux/slices/backetSlice";
 
 const CardItem = ({ card }) => {
     const { image, name, price, description } = card;
     const dispatch = useDispatch();
-    const priceForStore = price.split(" ").join("");
 
     function addProductCardForStore() {
-        console.log(price);
-        dispatch(setFullPrice(parseInt(priceForStore)));
         dispatch(setProductBacket(card));
     }
 

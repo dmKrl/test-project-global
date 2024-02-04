@@ -1,53 +1,58 @@
-import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import s from "../../../pages/backet-page/BacketPage.module.css";
-import { selectProductBacket } from "../../../redux/slices/backetSlice";
+import { setFullPrice } from "../../../redux/slices/backetSlice";
 import { Link } from "react-router-dom";
+import { useEffect, useRef, useState } from "react";
 
-const CardItemBacket = () => {
-    const productBacket = useSelector(selectProductBacket);
-    console.log(productBacket);
+const CardItemBacket = ({ card }) => {
+    const priceForStore = card.price.split(" ").join("");
+    const dispatch = useDispatch();
+    const prevRef = useRef();
+    const [productValue, setProductValue] = useState(1);
+    const [prevProductValue, setPrevProductValue] = useState(1);
+
+    function changeValueProduct(event) {
+        setProductValue((prev) => {
+            console.log(prev);
+            setPrevProductValue(prev);
+            return Number(event.target.value);
+        });
+    }
+
+    useEffect(() => {
+        prevRef.current = productValue;
+        console.log(prevRef, prevProductValue);
+        prevProductValue <= productValue
+            ? dispatch(setFullPrice(parseInt(priceForStore)))
+            : dispatch(setFullPrice(parseInt(priceForStore) * -1));
+    }, [productValue]);
+
     return (
         <div className={s.cartItem}>
-            {productBacket.length ? (
-                <>
-                    {productBacket.map((card, index) => {
-                        return (
-                            <div className={s.CardLeftBlock} key={index}>
-                                <div className={s.CardLeft}>
-                                    <img src={card.image} alt="" />
-                                    <div className={s.cartInfo}>
-                                        <h4 className={s.cardName}>
-                                            {card.name}
-                                        </h4>
-                                        <p className={s.cartText}>
-                                            {card.description}
-                                        </p>
-                                        <p className={s.cartPrice}>
-                                            {card.price}
-                                        </p>
-                                        <div className={s.cartBlock}>
-                                            <button className={s.cartButton}>
-                                                <Link to="/">Избранные</Link>
-                                            </button>
-                                            <button className={s.cartButton}>
-                                                Удалить
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input
-                                    className={s.cartInput}
-                                    type="number"
-                                    min="1"
-                                    defaultValue="1"
-                                />
-                            </div>
-                        );
-                    })}
-                </>
-            ) : (
-                "В настоящий момент, корзина пуста"
-            )}
+            <div className={s.CardLeftBlock}>
+                <div className={s.CardLeft}>
+                    <img src={card.image} alt="" />
+                    <div className={s.cartInfo}>
+                        <h4 className={s.cardName}>{card.name}</h4>
+                        <p className={s.cartText}>{card.description}</p>
+                        <p className={s.cartPrice}>{card.price}</p>
+                        <div className={s.cartBlock}>
+                            <button className={s.cartButton}>
+                                <Link to="/">Избранные</Link>
+                            </button>
+                            <button className={s.cartButton}>Удалить</button>
+                        </div>
+                    </div>
+                </div>
+                <input
+                    className={s.cartInput}
+                    type="number"
+                    min="1"
+                    max="99"
+                    onChange={changeValueProduct}
+                    defaultValue={productValue}
+                />
+            </div>
         </div>
     );
 };
