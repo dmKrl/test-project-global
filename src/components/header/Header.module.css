@@ -8,13 +8,16 @@
 .headerWrapper {
     height: 76px;
     max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.8);
     margin-bottom: 63px;
+}
+.headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .headerLogo a {
     font-style: normal;

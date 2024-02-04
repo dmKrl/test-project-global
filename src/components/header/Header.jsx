@@ -5,24 +5,26 @@ const Header = () => {
     const location = useLocation();
     return (
         <div className={s.header}>
-            <div className={s.headerWrapper}>
-                <div className={s.headerLogo}>
-                    <Link to="/">Интерьер</Link>
+            <div className={s.headerContainer}>
+                <div className={s.headerWrapper}>
+                    <div className={s.headerLogo}>
+                        <Link to="/">Интерьер</Link>
+                    </div>
+                    <nav className={s.nav}>
+                        {location.pathname === "/" ? (
+                            <Link to="/backet-page">Корзина</Link>
+                        ) : (
+                            <Link to="/">Каталог</Link>
+                        )}
+                    </nav>
                 </div>
-                <nav className={s.nav}>
+                <div className={s.headerBlock}>
                     {location.pathname === "/" ? (
-                        <Link to="/backet-page">Корзина</Link>
+                        <h1 className={s.headerHeading}>Каталог</h1>
                     ) : (
-                        <Link to="/">Каталог</Link>
+                        <h1 className={s.headerHeading}>Корзина</h1>
                     )}
-                </nav>
-            </div>
-            <div className={s.headerBlock}>
-                {location.pathname === "/" ? (
-                    <h1 className={s.headerHeading}>Каталог</h1>
-                ) : (
-                    <h1 className={s.headerHeading}>Корзина</h1>
-                )}
+                </div>
             </div>
         </div>
     );

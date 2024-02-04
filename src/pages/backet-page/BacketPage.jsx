@@ -5,8 +5,8 @@ import CardItem from "../../components/UI/card-item/CardItem";
 
 const BacketPage = () => {
     return (
-        <>
-            <div className={s.cart}>
+        <div className={s.cart}>
+            <div className={s.cartWrapper}>
                 <div className={s.cartContent}>
                     <div className={s.cardDescription}>
                         <p>Товар</p>
@@ -111,7 +111,7 @@ const BacketPage = () => {
                     <Link to="/">Перейти в каталог</Link>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

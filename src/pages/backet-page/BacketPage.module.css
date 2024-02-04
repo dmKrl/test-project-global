@@ -1,4 +1,8 @@
 .cart {
+    max-width: 1200px;
+    margin: auto;
+}
+.cartWrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 32px;

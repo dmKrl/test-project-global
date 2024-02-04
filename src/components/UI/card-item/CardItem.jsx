@@ -7,6 +7,9 @@ const CardItem = ({ card }) => {
     return (
         <div className={s.productCard}>
             <img src={image} alt="" className={s.productImg} />
+            <button className={s.productBag}>
+                <img src="/image/shopping-bag.svg" alt="" />
+            </button>
             <Link to="/" className={s.productName}>
                 {name}
             </Link>
