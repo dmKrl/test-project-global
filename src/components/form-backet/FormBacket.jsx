@@ -4,7 +4,6 @@ import { selectFullPrice } from "../../redux/slices/backetSlice";
 
 const FormBacket = () => {
     const fullPrice = useSelector(selectFullPrice);
-    console.log(fullPrice);
     return (
         <form className={s.form}>
             <input

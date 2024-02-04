@@ -1,6 +1,9 @@
 import { useDispatch } from "react-redux";
 import s from "../../../pages/backet-page/BacketPage.module.css";
-import { setFullPrice } from "../../../redux/slices/backetSlice";
+import {
+    deleteChoseProduct,
+    setFullPrice,
+} from "../../../redux/slices/backetSlice";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
@@ -13,15 +16,17 @@ const CardItemBacket = ({ card }) => {
 
     function changeValueProduct(event) {
         setProductValue((prev) => {
-            console.log(prev);
             setPrevProductValue(prev);
             return Number(event.target.value);
         });
     }
 
+    function deleteChoseCard() {
+        dispatch(deleteChoseProduct(card.name));
+    }
+
     useEffect(() => {
         prevRef.current = productValue;
-        console.log(prevRef, prevProductValue);
         prevProductValue <= productValue
             ? dispatch(setFullPrice(parseInt(priceForStore)))
             : dispatch(setFullPrice(parseInt(priceForStore) * -1));
@@ -40,7 +45,12 @@ const CardItemBacket = ({ card }) => {
                             <button className={s.cartButton}>
                                 <Link to="/">Избранные</Link>
                             </button>
-                            <button className={s.cartButton}>Удалить</button>
+                            <button
+                                onClick={deleteChoseCard}
+                                className={s.cartButton}
+                            >
+                                Удалить
+                            </button>
                         </div>
                     </div>
                 </div>

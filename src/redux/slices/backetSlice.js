@@ -23,16 +23,23 @@ const backetSlice = createSlice({
             state.fullPrice = 0;
             state.productBacket = [];
         },
-        setProductBacket: (state, action) => {
-            state.productBacket.includes(action.payload)
-                ? ""
-                : state.productBacket.push(action.payload);
+        deleteChoseProduct: (state, action) => {
+            return {
+                ...state,
+                productBacket: state.productBacket.filter(
+                    (card) => card.name !== action.payload
+                ),
+            };
         },
     },
 });
 
-export const { setProductBacket, clearAllProductBacket, setFullPrice } =
-    backetSlice.actions;
+export const {
+    setProductBacket,
+    clearAllProductBacket,
+    setFullPrice,
+    deleteChoseProduct,
+} = backetSlice.actions;
 
 export const selectProductBacket = (state) => state.backet.productBacket;
 export const selectFullPrice = (state) => state.backet.fullPrice;

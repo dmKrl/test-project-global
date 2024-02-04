@@ -8,6 +8,7 @@ import { selectProductBacket } from "../../redux/slices/backetSlice";
 
 const BacketPage = () => {
     const productBacket = useSelector(selectProductBacket);
+    console.log(productBacket);
 
     return (
         <div className={s.cart}>
