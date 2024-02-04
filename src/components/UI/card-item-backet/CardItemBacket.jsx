@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import s from "../../../pages/backet-page/BacketPage.module.css";
 import { selectProductBacket } from "../../../redux/slices/backetSlice";
+import { Link } from "react-router-dom";
 
 const CardItemBacket = () => {
     const productBacket = useSelector(selectProductBacket);
@@ -26,7 +27,7 @@ const CardItemBacket = () => {
                                         </p>
                                         <div className={s.cartBlock}>
                                             <button className={s.cartButton}>
-                                                Избранные
+                                                <Link to="/">Избранные</Link>
                                             </button>
                                             <button className={s.cartButton}>
                                                 Удалить
