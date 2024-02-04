@@ -14,7 +14,6 @@ const BacketPage = () => {
                         <p>К-во</p>
                     </div>
                     <CardItemBacket />
-                    <CardItemBacket />
                     <CartButtonBox />
                 </div>
 
