@@ -1,19 +1,28 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import s from "../../pages/backet-page/BacketPage.module.css";
-import { selectFullPrice } from "../../redux/slices/backetSlice";
+import {
+    clearAllProductBacket,
+    selectFullPrice,
+} from "../../redux/slices/backetSlice";
 import { useForm } from "react-hook-form";
+import { setIsShowingPopup } from "../../redux/slices/PopupSlice";
 
 const FormBacket = () => {
     const fullPrice = useSelector(selectFullPrice);
+    const dispatch = useDispatch();
     const {
         register,
         formState: { errors },
         handleSubmit,
+        reset,
     } = useForm({
         mode: "onBlur",
     });
-    function onSubmit(data) {
-        console.log(data);
+    function onSubmit() {
+        console.log("click");
+        dispatch(setIsShowingPopup());
+        dispatch(clearAllProductBacket());
+        reset();
     }
     return (
         <form className={s.form} onSubmit={handleSubmit(onSubmit)}>

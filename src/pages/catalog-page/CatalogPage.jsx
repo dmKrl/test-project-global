@@ -3,7 +3,6 @@ import CardItem from "../../components/UI/card-item/CardItem";
 import data from "../../data.json";
 
 const CatalogPage = () => {
-    console.log(data);
     return (
         <div className={s.product}>
             <div className={s.productContent}>
