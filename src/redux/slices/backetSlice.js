@@ -6,22 +6,38 @@ const initialState = {
     fullPrice: 0,
 };
 
+function addCardForState(state, action) {
+    state.productBacket.push(action.payload);
+}
+
+function checkProductBacketForRepeatAction(state, action) {
+    if (!state.productBacket.length) {
+        return addCardForState(state, action);
+    }
+    if (state.productBacket.length) {
+        let checkTrueOrFalse = state.productBacket.some((el) => {
+            return el.name === action.payload.name;
+        });
+        return checkTrueOrFalse ? true : addCardForState(state, action);
+    }
+}
+
 const backetSlice = createSlice({
     name: "backet",
     initialState,
     reducers: {
         setProductBacket: (state, action) => {
-            state.productBacket.includes(action.payload)
-                ? ""
-                : state.productBacket.push(action.payload);
+            checkProductBacketForRepeatAction(state, action);
         },
         setFullPrice: (state, action) => {
-            console.log(action.payload);
             state.fullPrice += Number(action.payload);
         },
         clearAllProductBacket: (state) => {
             state.fullPrice = 0;
             state.productBacket = [];
+        },
+        changePriceWithDeleteChoseCard: (state, action) => {
+            state.fullPrice -= action.payload;
         },
         deleteChoseProduct: (state, action) => {
             return {
@@ -39,6 +55,7 @@ export const {
     clearAllProductBacket,
     setFullPrice,
     deleteChoseProduct,
+    changePriceWithDeleteChoseCard,
 } = backetSlice.actions;
 
 export const selectProductBacket = (state) => state.backet.productBacket;

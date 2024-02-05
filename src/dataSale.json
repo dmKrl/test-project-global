@@ -3,21 +3,21 @@
         "name": "Кровать TATRAN",
         "description": "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
         "price": "120 000 руб.",
-        "notSalePrice": "140 000 руб.",
+        "SalePrice": "140 000 руб.",
         "image": "/image/TATRAN.png"
     },
     {
         "name": "Кресло VILORA",
         "description": "Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. ",
         "price": "21 000 руб.",
-        "notSalePrice": "28 000 руб.",
+        "SalePrice": "28 000 руб.",
         "image": "/image/VILORA.png"
     },
     {
         "name": "Стол MENU",
         "description": "Европейский дуб - отличается особой прочностью и стабильностью.",
         "price": "34 000 руб.",
-        "notSalePrice": "45 000 руб.",
+        "SalePrice": "45 000 руб.",
         "image": "/image/MENU.png"
     }
 ]

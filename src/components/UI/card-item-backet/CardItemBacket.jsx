@@ -1,11 +1,12 @@
 import { useDispatch } from "react-redux";
 import s from "../../../pages/backet-page/BacketPage.module.css";
 import {
+    changePriceWithDeleteChoseCard,
     deleteChoseProduct,
     setFullPrice,
 } from "../../../redux/slices/backetSlice";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const CardItemBacket = ({ card }) => {
     const priceForStore = card.price.split(" ").join("");
@@ -23,6 +24,11 @@ const CardItemBacket = ({ card }) => {
 
     function deleteChoseCard() {
         dispatch(deleteChoseProduct(card.name));
+        dispatch(
+            changePriceWithDeleteChoseCard(
+                parseInt(priceForStore) * productValue
+            )
+        );
     }
 
     useEffect(() => {

@@ -18,8 +18,8 @@ const BacketPage = () => {
                         <p>Товар</p>
                         <p>К-во</p>
                     </div>
-                    {productBacket.length
-                        ? productBacket.map((card, index) => {
+                    {productBacket?.length
+                        ? productBacket?.map((card, index) => {
                               return <CardItemBacket card={card} key={index} />;
                           })
                         : "В настоящий момент, корзина пуста"}

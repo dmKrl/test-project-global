@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import s from "../../../pages/catalog-page/CatalogPage.module.css";
 import { useDispatch } from "react-redux";
-import {
-    setProductBacket,
-} from "../../../redux/slices/backetSlice";
+import { setProductBacket } from "../../../redux/slices/backetSlice";
 
 const CardItem = ({ card }) => {
-    const { image, name, price, description } = card;
+    const { image, name, price, description, SalePrice } = card;
     const dispatch = useDispatch();
 
     function addProductCardForStore() {
@@ -23,7 +21,10 @@ const CardItem = ({ card }) => {
                 {name}
             </Link>
             <p className={s.productText}>{description}</p>
-            <p className={s.productPrice}>{price}</p>
+            <div className={s.productBox}>
+                <p className={s.productPrice}>{price}</p>
+                <p className={s.productPriceSale}>{SalePrice}</p>
+            </div>
         </div>
     );
 };

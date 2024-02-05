@@ -111,10 +111,9 @@
     grid-column: span 4;
 }
 .cartHeading {
-    font-family: "Poppins";
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 26px;
     line-height: 36px;
     text-align: center;
     color: #000000;

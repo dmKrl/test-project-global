@@ -7,8 +7,8 @@ const CatalogPage = () => {
     return (
         <div className={s.product}>
             <div className={s.productContent}>
-                {data.map((card) => {
-                    return <CardItem card={card} />;
+                {data.map((card, index) => {
+                    return <CardItem card={card} key={index} />;
                 })}
             </div>
         </div>
