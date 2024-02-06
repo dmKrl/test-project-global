@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import s from "../../../pages/catalog-page/CatalogPage.module.css";
 import { useDispatch } from "react-redux";
 import { setProductBasket } from "../../../redux/slices/basketSlice";
+import imageBag from "../../../image/shopping-bag.svg";
 
 const CardItem = ({ card }) => {
     const { image, name, price, description, SalePrice } = card;
@@ -15,7 +16,7 @@ const CardItem = ({ card }) => {
         <div className={s.productCard}>
             <img src={image} alt="" className={s.productImg} />
             <button className={s.productBag} onClick={addProductCardForStore}>
-                <img src="/image/shopping-bag.svg" alt="" />
+                <img src={imageBag} alt="" />
             </button>
             <Link to="/" className={s.productName}>
                 {name}

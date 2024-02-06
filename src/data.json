@@ -3,36 +3,36 @@
         "name": "Кровать TATRAN",
         "description": "Основание из полированной нержавеющей стали, придает оригинальный парящий эффект.",
         "price": "120 000 руб.",
-        "image": "/image/TATRAN.png"
+        "image": "/test-project-global/static/media/TATRAN.f55ed93dc6c2b9181bff.png"
     },
     {
         "name": "Кресло VILORA",
         "description": "Мягкое и уютное, аккуратное и стильное. Упругие подушки сиденья и приятная на ощупь ткань. ",
         "price": "21 000 руб.",
-        "image": "/image/VILORA.png"
+        "image": "/test-project-global/static/media/VILORA.70e93eb904daab1d6d5b.png"
     },
     {
         "name": "Стол MENU",
         "description": "Европейский дуб - отличается особой прочностью и стабильностью.",
         "price": "34 000 руб.",
-        "image": "/image/MENU.png"
+        "image": "/test-project-global/static/media/MENU.1fd4331e184ba4d6269a.png"
     },
     {
         "name": "Диван ASKESTA",
         "description": "Благодаря защелкивающемуся механизму диван легко раскладывается в комфортную кровать",
         "price": "68 000 руб.",
-        "image": "/image/AKSETA.png"
+        "image": "/test-project-global/static/media/AKSETA.b152ec55afc7644f1fba.png"
     },
     {
         "name": "Кресло LUNAR",
         "description": "Прекрасно переносит солнечные лучи, перепады влажности и любые осадки",
         "price": "40 000 руб.",
-        "image": "/image/LUNAR.png"
+        "image": "/test-project-global/static/media/LUNAR.60e50c9e78b93013b6d5.png"
     },
     {
         "name": "Шкаф Nastan",
         "description": "Мебель может быть оснащена разнообразными системами подсветки.",
         "price": "80 000 руб.",
-        "image": "/image/NASTAN.png"
+        "image": "/test-project-global/static/media/NASTAN.957e4b642f0edf9de48a.png"
     }
 ]
