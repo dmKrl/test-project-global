@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
-import s from "../../../pages/backet-page/BacketPage.module.css";
+import s from "../../../pages/basket-page/BasketPage.module.css";
 import {
     changePriceWithDeleteChoseCard,
     deleteChoseProduct,
     setFullPrice,
-} from "../../../redux/slices/backetSlice";
+} from "../../../redux/slices/basketSlice";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 
-const CardItemBacket = ({ card }) => {
+const CardItemBasket = ({ card }) => {
     const priceForStore = card.price.split(" ").join("");
     const dispatch = useDispatch();
     const prevRef = useRef();
@@ -72,4 +72,4 @@ const CardItemBacket = ({ card }) => {
     );
 };
 
-export default CardItemBacket;
+export default CardItemBasket;

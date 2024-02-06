@@ -1,13 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
-import s from "../../pages/backet-page/BacketPage.module.css";
+import s from "../../pages/basket-page/BasketPage.module.css";
 import {
-    clearAllProductBacket,
+    clearAllProductBasket,
     selectFullPrice,
-} from "../../redux/slices/backetSlice";
+    selectProductBasket,
+} from "../../redux/slices/basketSlice";
 import { useForm } from "react-hook-form";
 import { setIsShowingPopup } from "../../redux/slices/popupSlice";
 
-const FormBacket = () => {
+const FormBasket = () => {
+    const productBasket = useSelector(selectProductBasket);
     const fullPrice = useSelector(selectFullPrice);
     const dispatch = useDispatch();
     const {
@@ -20,7 +22,7 @@ const FormBacket = () => {
     });
     function onSubmit() {
         dispatch(setIsShowingPopup());
-        dispatch(clearAllProductBacket());
+        dispatch(clearAllProductBasket());
         reset();
     }
     return (
@@ -41,7 +43,7 @@ const FormBacket = () => {
                     required: "Поле обязательно к заполнению",
                     minLength: {
                         value: 10,
-                        message: "Минимум 5 символов",
+                        message: "Минимум 10 символов",
                     },
                 })}
                 type="number"
@@ -63,11 +65,15 @@ const FormBacket = () => {
                 {errors?.address && <p>{errors?.address?.message}</p>}
             </span>
             <p className={s.formResult}>Итого: {fullPrice} руб.</p>
-            <button type="submit" className={s.formSubmit}>
+            <button
+                type="submit"
+                className={s.formSubmit}
+                disabled={!productBasket.length}
+            >
                 Оформить заказ
             </button>
         </form>
     );
 };
 
-export default FormBacket;
+export default FormBasket;

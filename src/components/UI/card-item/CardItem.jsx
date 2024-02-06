@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import s from "../../../pages/catalog-page/CatalogPage.module.css";
 import { useDispatch } from "react-redux";
-import { setProductBacket } from "../../../redux/slices/backetSlice";
+import { setProductBasket } from "../../../redux/slices/basketSlice";
 
 const CardItem = ({ card }) => {
     const { image, name, price, description, SalePrice } = card;
     const dispatch = useDispatch();
 
     function addProductCardForStore() {
-        dispatch(setProductBacket(card));
+        dispatch(setProductBasket(card));
     }
 
     return (

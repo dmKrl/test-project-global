@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./pages/main-page/MainPage";
-import BacketPage from "./pages/backet-page/BacketPage";
+import BasketPage from "./pages/basket-page/BasketPage";
 import CatalogPage from "./pages/catalog-page/CatalogPage";
 
 const AppRoutes = () => {
@@ -8,7 +8,7 @@ const AppRoutes = () => {
         <Routes>
             <Route element={<MainPage />} path="/">
                 <Route element={<CatalogPage />} path="/" />
-                <Route element={<BacketPage />} path="/backet-page" />
+                <Route element={<BasketPage />} path="/basket-page" />
             </Route>
         </Routes>
     );

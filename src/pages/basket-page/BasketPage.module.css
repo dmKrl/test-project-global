@@ -170,6 +170,15 @@
     border-radius: 50px;
     color: #000000;
 }
+.formSubmit:disabled {
+    background: #eaeaea70;
+    border: 1px solid #959595;
+}
+.formSubmit:disabled:hover {
+    background: #eaeaea70;
+    border: 1px solid #959595;
+    color: #686868;
+}
 .formSubmit:hover {
     transition: all 0.4s;
     animation: zoom 0.5s ease-out 0s 1 normal forwards;

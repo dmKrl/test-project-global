@@ -4,7 +4,11 @@ import s from "./Header.module.css";
 const Header = () => {
     const location = useLocation();
     return (
-        <div className={s.header}>
+        <div
+            className={
+                location.pathname === "/" ? `${s.header}` : `${s.header}`
+            }
+        >
             <div className={s.headerContainer}>
                 <div className={s.headerWrapper}>
                     <div className={s.headerLogo}>
@@ -12,7 +16,7 @@ const Header = () => {
                     </div>
                     <nav className={s.nav}>
                         {location.pathname === "/" ? (
-                            <Link to="/backet-page">Корзина</Link>
+                            <Link to="/basket-page">Корзина</Link>
                         ) : (
                             <Link to="/">Каталог</Link>
                         )}

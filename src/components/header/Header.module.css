@@ -5,6 +5,12 @@
     background-position: center;
     background-size: cover;
 }
+.headerCatalog {
+    background-image: url("../../../public/image/catalog_pict.jpg");
+}
+.headerBasket {
+    background-image: url("../../../public/image/basket.jpg");
+}
 .headerWrapper {
     height: 76px;
     max-width: 1200px;

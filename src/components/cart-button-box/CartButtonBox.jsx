@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import s from "../../pages/backet-page/BacketPage.module.css";
+import s from "../../pages/basket-page/BasketPage.module.css";
 import { useDispatch } from "react-redux";
-import { clearAllProductBacket } from "../../redux/slices/backetSlice";
+import { clearAllProductBasket } from "../../redux/slices/basketSlice";
 
 const CartButtonBox = () => {
     const dispatch = useDispatch();
     function deleteAllCards() {
-        dispatch(clearAllProductBacket());
+        dispatch(clearAllProductBasket());
     }
     return (
         <div className={s.cartButtonBox}>

@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
-import s from "./BacketPage.module.css";
-import CardItemBacket from "../../components/UI/card-item-backet/CardItemBacket";
+import s from "./BasketPage.module.css";
+import CardItemBasket from "../../components/UI/card-item-basket/CardItemBasket";
 import CartButtonBox from "../../components/cart-button-box/CartButtonBox";
-import FormBacket from "../../components/form-backet/FormBacket";
+import FormBasket from "../../components/form-basket/FormBasket";
 import SpecialProduct from "../../components/special-product/SpecialProduct";
-import { selectProductBacket } from "../../redux/slices/backetSlice";
+import { selectProductBasket } from "../../redux/slices/basketSlice";
 
-const BacketPage = () => {
-    const productBacket = useSelector(selectProductBacket);
-    console.log(productBacket);
+const BasketPage = () => {
+    const productBasket = useSelector(selectProductBasket);
+    console.log(productBasket);
 
     return (
         <div className={s.cart}>
@@ -18,9 +18,9 @@ const BacketPage = () => {
                         <p>Товар</p>
                         <p>К-во</p>
                     </div>
-                    {productBacket?.length
-                        ? productBacket?.map((card, index) => {
-                              return <CardItemBacket card={card} key={index} />;
+                    {productBasket?.length
+                        ? productBasket?.map((card, index) => {
+                              return <CardItemBasket card={card} key={index} />;
                           })
                         : "В настоящий момент, корзина пуста"}
                     <CartButtonBox />
@@ -28,7 +28,7 @@ const BacketPage = () => {
 
                 <div className={s.cartOrder}>
                     <h3 className={s.cartHeading}>Оформление заказа</h3>
-                    <FormBacket />
+                    <FormBasket />
                 </div>
             </div>
             <SpecialProduct />
@@ -36,4 +36,4 @@ const BacketPage = () => {
     );
 };
 
-export default BacketPage;
+export default BasketPage;

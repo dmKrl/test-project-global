@@ -13,7 +13,7 @@ const Footer = () => {
                         <h4 className={s.footerHeading}>Меню</h4>
                         <div className={s.footerNav}>
                             <Link to="/">Каталог</Link>
-                            <Link to="/backet-page">Корзина</Link>
+                            <Link to="/basket-page">Корзина</Link>
                         </div>
                     </div>
                     <div className={s.footerItem}>

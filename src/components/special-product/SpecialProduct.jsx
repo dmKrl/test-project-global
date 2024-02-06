@@ -1,4 +1,4 @@
-import s from "../../pages/backet-page/BacketPage.module.css";
+import s from "../../pages/basket-page/BasketPage.module.css";
 import dataSale from "../../dataSale.json";
 import { Link } from "react-router-dom";
 import CardItem from "../../components/UI/card-item/CardItem";

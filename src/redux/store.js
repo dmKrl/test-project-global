@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { backetReducer } from "./slices/backetSlice";
+import { basketReducer } from "./slices/basketSlice";
 import { PopupReducer } from "./slices/popupSlice";
 
 const store = configureStore({
     reducer: {
-        backet: backetReducer,
+        basket: basketReducer,
         popup: PopupReducer,
     },
 });

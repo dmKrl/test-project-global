@@ -2,39 +2,39 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    productBacket: [],
+    productBasket: [],
     fullPrice: 0,
 };
 
 function addCardForState(state, action) {
-    state.productBacket.push(action.payload);
+    state.productBasket.push(action.payload);
 }
 
-function checkProductBacketForRepeatAction(state, action) {
-    if (!state.productBacket.length) {
+function checkProductBasketForRepeatAction(state, action) {
+    if (!state.productBasket.length) {
         return addCardForState(state, action);
     }
-    if (state.productBacket.length) {
-        let checkTrueOrFalse = state.productBacket.some((el) => {
+    if (state.productBasket.length) {
+        let checkTrueOrFalse = state.productBasket.some((el) => {
             return el.name === action.payload.name;
         });
         return checkTrueOrFalse ? true : addCardForState(state, action);
     }
 }
 
-const backetSlice = createSlice({
-    name: "backet",
+const basketSlice = createSlice({
+    name: "basket",
     initialState,
     reducers: {
-        setProductBacket: (state, action) => {
-            checkProductBacketForRepeatAction(state, action);
+        setProductBasket: (state, action) => {
+            checkProductBasketForRepeatAction(state, action);
         },
         setFullPrice: (state, action) => {
             state.fullPrice += Number(action.payload);
         },
-        clearAllProductBacket: (state) => {
+        clearAllProductBasket: (state) => {
             state.fullPrice = 0;
-            state.productBacket = [];
+            state.productBasket = [];
         },
         changePriceWithDeleteChoseCard: (state, action) => {
             state.fullPrice -= action.payload;
@@ -42,7 +42,7 @@ const backetSlice = createSlice({
         deleteChoseProduct: (state, action) => {
             return {
                 ...state,
-                productBacket: state.productBacket.filter(
+                productBasket: state.productBasket.filter(
                     (card) => card.name !== action.payload
                 ),
             };
@@ -51,14 +51,14 @@ const backetSlice = createSlice({
 });
 
 export const {
-    setProductBacket,
-    clearAllProductBacket,
+    setProductBasket,
+    clearAllProductBasket,
     setFullPrice,
     deleteChoseProduct,
     changePriceWithDeleteChoseCard,
-} = backetSlice.actions;
+} = basketSlice.actions;
 
-export const selectProductBacket = (state) => state.backet.productBacket;
-export const selectFullPrice = (state) => state.backet.fullPrice;
+export const selectProductBasket = (state) => state.basket.productBasket;
+export const selectFullPrice = (state) => state.basket.fullPrice;
 
-export const backetReducer = backetSlice.reducer;
+export const basketReducer = basketSlice.reducer;
