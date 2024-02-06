@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import s from "../../../pages/catalog-page/CatalogPage.module.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setProductBasket } from "../../../redux/slices/basketSlice";
+import { selectImagesCards } from "../../../redux/slices/imagesSlice";
 import imageBag from "../../../image/shopping-bag.svg";
 
-const CardItem = ({ card }) => {
-    const { image, name, price, description, SalePrice } = card;
+const CardItem = ({ card, index }) => {
+    const imagesStore = useSelector(selectImagesCards);
+    console.log(index, imagesStore);
+    const { name, price, description, SalePrice } = card;
     const dispatch = useDispatch();
 
     function addProductCardForStore() {
@@ -14,7 +17,7 @@ const CardItem = ({ card }) => {
 
     return (
         <div className={s.productCard}>
-            <img src={image} alt="" className={s.productImg} />
+            <img src={imagesStore[index].image} alt="" className={s.productImg} />
             <button className={s.productBag} onClick={addProductCardForStore}>
                 <img src={imageBag} alt="" />
             </button>

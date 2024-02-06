@@ -9,7 +9,7 @@ const SpecialProduct = () => {
             <h2 className={s.heading}>Специальные предложение</h2>
             <div className={s.productContent}>
                 {dataSale.map((card, index) => {
-                    return <CardItem card={card} key={index} />;
+                    return <CardItem card={card} key={index} index={index}/>;
                 })}
             </div>
             <div className={s.middleCatalogBlock}>

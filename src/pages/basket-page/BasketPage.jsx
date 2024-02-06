@@ -20,7 +20,13 @@ const BasketPage = () => {
                     </div>
                     {productBasket?.length
                         ? productBasket?.map((card, index) => {
-                              return <CardItemBasket card={card} key={index} />;
+                              return (
+                                  <CardItemBasket
+                                      card={card}
+                                      key={index}
+                                      index={index}
+                                  />
+                              );
                           })
                         : "В настоящий момент, корзина пуста"}
                     <CartButtonBox />

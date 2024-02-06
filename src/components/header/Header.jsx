@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div
             className={
-                location.pathname === "/" ? `${s.header}` : `${s.header}`
+                location.pathname === "/" ? `${s.header} ${s.headerCatalog}` : `${s.header} ${s.headerBasket}`
             }
         >
             <div className={s.headerContainer}>
