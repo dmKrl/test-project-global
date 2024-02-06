@@ -5,7 +5,7 @@ import {
     selectFullPrice,
 } from "../../redux/slices/backetSlice";
 import { useForm } from "react-hook-form";
-import { setIsShowingPopup } from "../../redux/slices/PopupSlice";
+import { setIsShowingPopup } from "../../redux/slices/popupSlice";
 
 const FormBacket = () => {
     const fullPrice = useSelector(selectFullPrice);

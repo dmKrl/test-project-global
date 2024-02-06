@@ -6,7 +6,7 @@ import {
     setFullPrice,
 } from "../../../redux/slices/backetSlice";
 import { Link } from "react-router-dom";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const CardItemBacket = ({ card }) => {
     const priceForStore = card.price.split(" ").join("");
@@ -15,11 +15,20 @@ const CardItemBacket = ({ card }) => {
     const [productValue, setProductValue] = useState(1);
     const [prevProductValue, setPrevProductValue] = useState(1);
 
+    // const changeFullPrice = useCallback(() => {
+    //     console.log(prevProductValue);
+    //     prevProductValue <= productValue
+    //         ? dispatch(setFullPrice(parseInt(priceForStore)))
+    //         : dispatch(setFullPrice(parseInt(priceForStore) * -1));
+    // }, [priceForStore, prevProductValue, productValue, dispatch]);
+
     function changeValueProduct(event) {
         setProductValue((prev) => {
+            console.log(prev);
             setPrevProductValue(prev);
             return Number(event.target.value);
         });
+        // changeFullPrice();
     }
 
     function deleteChoseCard() {
@@ -30,8 +39,8 @@ const CardItemBacket = ({ card }) => {
             )
         );
     }
-
     useEffect(() => {
+        console.log(prevRef);
         prevRef.current = productValue;
         prevProductValue <= productValue
             ? dispatch(setFullPrice(parseInt(priceForStore)))
@@ -63,7 +72,7 @@ const CardItemBacket = ({ card }) => {
                 <input
                     className={s.cartInput}
                     type="number"
-                    min="1"
+                    min="0"
                     max="99"
                     onChange={changeValueProduct}
                     defaultValue={productValue}

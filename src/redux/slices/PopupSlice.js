@@ -5,7 +5,7 @@ const initialState = {
     isShowingPopup: false,
 };
 
-const PopupSlice = createSlice({
+const popupSlice = createSlice({
     name: "popup",
     initialState,
     reducers: {
@@ -15,8 +15,8 @@ const PopupSlice = createSlice({
     },
 });
 
-export const { setIsShowingPopup } = PopupSlice.actions;
+export const { setIsShowingPopup } = popupSlice.actions;
 
 export const selectIsShowingPopup = (state) => state.popup.isShowingPopup;
 
-export const PopupReducer = PopupSlice.reducer;
+export const PopupReducer = popupSlice.reducer;
