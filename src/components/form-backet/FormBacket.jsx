@@ -19,7 +19,6 @@ const FormBacket = () => {
         mode: "onBlur",
     });
     function onSubmit() {
-        console.log("click");
         dispatch(setIsShowingPopup());
         dispatch(clearAllProductBacket());
         reset();

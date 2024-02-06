@@ -15,20 +15,11 @@ const CardItemBacket = ({ card }) => {
     const [productValue, setProductValue] = useState(1);
     const [prevProductValue, setPrevProductValue] = useState(1);
 
-    // const changeFullPrice = useCallback(() => {
-    //     console.log(prevProductValue);
-    //     prevProductValue <= productValue
-    //         ? dispatch(setFullPrice(parseInt(priceForStore)))
-    //         : dispatch(setFullPrice(parseInt(priceForStore) * -1));
-    // }, [priceForStore, prevProductValue, productValue, dispatch]);
-
     function changeValueProduct(event) {
         setProductValue((prev) => {
-            console.log(prev);
             setPrevProductValue(prev);
             return Number(event.target.value);
         });
-        // changeFullPrice();
     }
 
     function deleteChoseCard() {
@@ -40,12 +31,11 @@ const CardItemBacket = ({ card }) => {
         );
     }
     useEffect(() => {
-        console.log(prevRef);
         prevRef.current = productValue;
         prevProductValue <= productValue
             ? dispatch(setFullPrice(parseInt(priceForStore)))
             : dispatch(setFullPrice(parseInt(priceForStore) * -1));
-    }, [productValue]);
+    }, [productValue, priceForStore, prevProductValue, dispatch]);
 
     return (
         <div className={s.cartItem}>
