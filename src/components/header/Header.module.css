@@ -50,3 +50,32 @@
     line-height: 20px;
     color: white;
 }
+
+@media (max-width: 767px) {
+    .header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .headerWrapper {
+        max-width: 767px;
+    }
+    .headerContainer {
+        max-width: 767px;
+        margin: 0 auto;
+    }
+    .headerLogo a {
+        font-size: 36px;
+    }
+    .headerHeading {
+        font-size: 48px;
+        max-width: 767px;
+        text-align: center;
+    }
+    .nav {
+        display: flex;
+        gap: 16px;
+    }
+    .nav a {
+        font-size: 12px;
+    }
+}

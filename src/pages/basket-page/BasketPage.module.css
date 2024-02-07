@@ -229,3 +229,102 @@
     height: 5px;
     color: rgb(205, 8, 8);
 }
+
+@media (max-width: 767px) {
+    .cart {
+        max-width: 767px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .cartWrapper {
+        grid-template-columns: repeat(8, 1fr);
+        row-gap: 64px;
+        margin-top: 32px;
+    }
+    .cartContent {
+        grid-column: span 8;
+    }
+    .CardLeft img {
+        display: none;
+    }
+    .cartInfo {
+        gap: 12px;
+        max-width: 276px;
+    }
+    .cardName {
+        font-size: 20px;
+        line-height: 22px;
+    }
+    .cartText {
+        font-size: 12px;
+    }
+    .cartPrice {
+        font-size: 16px;
+    }
+    .cartButton {
+        color: #000000;
+        text-decoration-line: none;
+    }
+    .cartButton:hover {
+        text-decoration: underline;
+    }
+    .cartInput {
+        width: 60px;
+        height: 45px;
+    }
+    .cartOrder {
+        padding-right: 32px;
+        background: #f7f6f6;
+        border-radius: 20px;
+        height: 556px;
+        grid-column: span 8;
+    }
+    .cartHeading {
+        font-size: 20px;
+    }
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+    }
+    .formInput {
+        min-width: 240px;
+        font-size: 12px;
+    }
+    .formResult {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 16px;
+    }
+    .formSubmit {
+        width: 180px;
+        font-size: 12px;
+    }
+
+    .heading {
+        font-size: 40px;
+        text-align: center;
+        color: #000000;
+    }
+    .productBox {
+        padding-top: 48px;
+    }
+    .productContent {
+        margin-left: 8px;
+        gap: 26px;
+        margin-top: 28px;
+    }
+
+    .middleCatalogBlock {
+        padding-top: 28px;
+    }
+    .middleCatalogBlock a {
+        font-size: 14px;
+    }
+    .messageError {
+        font-size: 12px;
+        height: 2px;
+        color: rgb(205, 8, 8);
+    }
+}

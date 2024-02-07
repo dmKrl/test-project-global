@@ -52,3 +52,36 @@
     font-weight: 400;
     line-height: normal;
 }
+
+@media (max-width: 767px) {
+    .footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .footerContainer {
+        max-width: 767px;
+    }
+    .footerLogo a {
+        font-size: 20px;
+    }
+    .footerInfo {
+        max-width: 280px;
+    }
+    .footerItem {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footerHeading {
+        color: #000;
+        font-size: 20px;
+    }
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .footerNav a {
+        font-size: 10px;
+    }
+}
