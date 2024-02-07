@@ -90,11 +90,11 @@
     background: #f7f6f6;
     border-radius: 6px;
     border-style: none;
-    width: 40px;
-    height: 31px;
+    width: 60px;
+    height: 51px;
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 210%;
     color: #000000;
     padding-left: 16px;
@@ -103,8 +103,8 @@
 }
 .cartButtonChange {
     background: #f7f6f6;
-    width: 31px;
-    height: 31px;
+    width: 51px;
+    height: 51px;
     border-radius: 22px;
     font-size: 16px;
 }
@@ -259,9 +259,12 @@
     .CardLeft img {
         display: none;
     }
+    .CardLeftBlock {
+        justify-content: center;
+    }
     .cartInfo {
         gap: 12px;
-        max-width: 276px;
+        max-width: 248px;
     }
     .cardName {
         font-size: 20px;
@@ -286,12 +289,12 @@
     .cartInput {
         font-size: 10px;
         width: 45px;
-        height: 21px;
+        height: 31px;
     }
     .cartButtonChange {
         background: #f7f6f6;
-        width: 21px;
-        height: 21px;
+        width: 31px;
+        height: 31px;
         border-radius: 22px;
         font-size: 12px;
     }
