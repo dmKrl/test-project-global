@@ -46,3 +46,19 @@
     transform: scale(1.01);
     border: 0.5px solid rgb(173, 173, 173);
 }
+@media (max-width: 767px) {
+    .popupContent {
+        gap: 16px;
+        border-radius: 12px;
+        font-size: 20px;
+        padding: 42px;
+    }
+    .popupActive {
+        pointer-events: all;
+        opacity: 1;
+    }
+    .popupButton {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}

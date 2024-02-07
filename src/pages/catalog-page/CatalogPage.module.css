@@ -68,7 +68,7 @@
 
 @media (max-width: 767px) {
     .product {
-        max-width: 767px;
+        max-width: 380px;
         margin-top: 40px;
     }
     .productContent {

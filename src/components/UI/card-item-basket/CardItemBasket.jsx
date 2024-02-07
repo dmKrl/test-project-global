@@ -9,20 +9,29 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { selectImagesCards } from "../../../redux/slices/imagesSlice";
 
-const CardItemBasket = ({ card, index }) => {
+const CardItemBasket = ({ card }) => {
     const priceForStore = card.price.split(" ").join("");
     const imagesStore = useSelector(selectImagesCards);
-    console.log(index, card);
 
     const dispatch = useDispatch();
     const prevRef = useRef();
     const [productValue, setProductValue] = useState(1);
     const [prevProductValue, setPrevProductValue] = useState(1);
-
-    function changeValueProduct(event) {
+    console.log(productValue);
+    function changeValueProductNext() {
         setProductValue((prev) => {
             setPrevProductValue(prev);
-            return Number(event.target.value);
+            return Number(productValue + 1);
+        });
+    }
+    function changeValueProductPrev() {
+        setProductValue((prev) => {
+            if (productValue > 0) {
+                setPrevProductValue(prev);
+                return Number(productValue - 1);
+            } else {
+                return 0;
+            }
         });
     }
 
@@ -42,7 +51,6 @@ const CardItemBasket = ({ card, index }) => {
         );
     }
     useEffect(() => {
-        
         prevRef.current = productValue;
         prevProductValue <= productValue
             ? dispatch(setFullPrice(parseInt(priceForStore)))
@@ -71,14 +79,25 @@ const CardItemBasket = ({ card, index }) => {
                         </div>
                     </div>
                 </div>
-                <input
-                    className={s.cartInput}
-                    type="number"
-                    min="0"
-                    max="99"
-                    onChange={changeValueProduct}
-                    defaultValue={productValue}
-                />
+                <div className={s.cartBox}>
+                    <button
+                        className={s.cartButtonChange}
+                        onClick={changeValueProductNext}
+                    >
+                        +
+                    </button>
+                    <input
+                        className={s.cartInput}
+                        type="text"
+                        value={productValue}
+                    />
+                    <button
+                        className={s.cartButtonChange}
+                        onClick={changeValueProductPrev}
+                    >
+                        -
+                    </button>
+                </div>
             </div>
         </div>
     );
