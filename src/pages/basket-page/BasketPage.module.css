@@ -276,7 +276,7 @@
         padding-right: 32px;
         background: #f7f6f6;
         border-radius: 20px;
-        height: 556px;
+        height: 480px;
         grid-column: span 8;
     }
     .cartHeading {
@@ -286,7 +286,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 28px;
+        gap: 22px;
     }
     .formInput {
         min-width: 240px;
@@ -294,8 +294,8 @@
     }
     .formResult {
         font-size: 20px;
-        margin-top: 20px;
-        margin-bottom: 16px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
     .formSubmit {
         width: 180px;
