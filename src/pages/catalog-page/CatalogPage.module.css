@@ -50,17 +50,19 @@
 }
 .productBag {
     position: absolute;
-    top: 15;
-    right: 20;
+    top: 342px;
+    right: 20px;
 }
 .productBox {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 28px;
 }
 .productPriceSale {
     font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 22px;
+    opacity: 0.5;
     line-height: 29px;
     color: #6f6f6f;
     text-decoration: line-through;
@@ -77,6 +79,9 @@
         margin-left: 32px;
         gap: 22px;
     }
+    .productBag {
+        top: 306px;
+    }
     .productCard {
         width: 320px;
     }
@@ -90,6 +95,6 @@
         font-size: 20px;
     }
     .productPriceSale {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
