@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web-app-furniture/static/css/main.3f9e9a5b.css",
-    "main.js": "/web-app-furniture/static/js/main.84a62f77.js",
+    "main.js": "/web-app-furniture/static/js/main.5332acee.js",
     "static/media/catalog_pict.jpg": "/web-app-furniture/static/media/catalog_pict.fb2a8320e065509c93f1.jpg",
     "static/media/basket.jpg": "/web-app-furniture/static/media/basket.aab611d5e554c9503cbd.jpg",
     "static/media/LUNAR.png": "/web-app-furniture/static/media/LUNAR.60e50c9e78b93013b6d5.png",
@@ -13,10 +13,10 @@
     "static/media/shopping-bag.svg": "/web-app-furniture/static/media/shopping-bag.31d14b78a7e75923bd031e78380bd127.svg",
     "index.html": "/web-app-furniture/index.html",
     "main.3f9e9a5b.css.map": "/web-app-furniture/static/css/main.3f9e9a5b.css.map",
-    "main.84a62f77.js.map": "/web-app-furniture/static/js/main.84a62f77.js.map"
+    "main.5332acee.js.map": "/web-app-furniture/static/js/main.5332acee.js.map"
   },
   "entrypoints": [
     "static/css/main.3f9e9a5b.css",
-    "static/js/main.84a62f77.js"
+    "static/js/main.5332acee.js"
   ]
 }
