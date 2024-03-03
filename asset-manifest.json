@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/test-project-global/static/css/main.a02b8769.css",
-    "main.js": "/test-project-global/static/js/main.53654775.js",
-    "static/media/catalog_pict.jpg": "/test-project-global/static/media/catalog_pict.fb2a8320e065509c93f1.jpg",
-    "static/media/basket.jpg": "/test-project-global/static/media/basket.aab611d5e554c9503cbd.jpg",
-    "static/media/LUNAR.png": "/test-project-global/static/media/LUNAR.60e50c9e78b93013b6d5.png",
-    "static/media/MENU.png": "/test-project-global/static/media/MENU.1fd4331e184ba4d6269a.png",
-    "static/media/NASTAN.png": "/test-project-global/static/media/NASTAN.957e4b642f0edf9de48a.png",
-    "static/media/AKSETA.png": "/test-project-global/static/media/AKSETA.b152ec55afc7644f1fba.png",
-    "static/media/VILORA.png": "/test-project-global/static/media/VILORA.70e93eb904daab1d6d5b.png",
-    "static/media/TATRAN.png": "/test-project-global/static/media/TATRAN.f55ed93dc6c2b9181bff.png",
-    "static/media/shopping-bag.svg": "/test-project-global/static/media/shopping-bag.31d14b78a7e75923bd031e78380bd127.svg",
-    "index.html": "/test-project-global/index.html",
-    "main.a02b8769.css.map": "/test-project-global/static/css/main.a02b8769.css.map",
-    "main.53654775.js.map": "/test-project-global/static/js/main.53654775.js.map"
+    "main.css": "/web-app-furniture/static/css/main.3f9e9a5b.css",
+    "main.js": "/web-app-furniture/static/js/main.84a62f77.js",
+    "static/media/catalog_pict.jpg": "/web-app-furniture/static/media/catalog_pict.fb2a8320e065509c93f1.jpg",
+    "static/media/basket.jpg": "/web-app-furniture/static/media/basket.aab611d5e554c9503cbd.jpg",
+    "static/media/LUNAR.png": "/web-app-furniture/static/media/LUNAR.60e50c9e78b93013b6d5.png",
+    "static/media/MENU.png": "/web-app-furniture/static/media/MENU.1fd4331e184ba4d6269a.png",
+    "static/media/NASTAN.png": "/web-app-furniture/static/media/NASTAN.957e4b642f0edf9de48a.png",
+    "static/media/AKSETA.png": "/web-app-furniture/static/media/AKSETA.b152ec55afc7644f1fba.png",
+    "static/media/VILORA.png": "/web-app-furniture/static/media/VILORA.70e93eb904daab1d6d5b.png",
+    "static/media/TATRAN.png": "/web-app-furniture/static/media/TATRAN.f55ed93dc6c2b9181bff.png",
+    "static/media/shopping-bag.svg": "/web-app-furniture/static/media/shopping-bag.31d14b78a7e75923bd031e78380bd127.svg",
+    "index.html": "/web-app-furniture/index.html",
+    "main.3f9e9a5b.css.map": "/web-app-furniture/static/css/main.3f9e9a5b.css.map",
+    "main.84a62f77.js.map": "/web-app-furniture/static/js/main.84a62f77.js.map"
   },
   "entrypoints": [
-    "static/css/main.a02b8769.css",
-    "static/js/main.53654775.js"
+    "static/css/main.3f9e9a5b.css",
+    "static/js/main.84a62f77.js"
   ]
 }
