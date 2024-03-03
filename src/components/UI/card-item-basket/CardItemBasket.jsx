@@ -17,13 +17,14 @@ const CardItemBasket = ({ card }) => {
     const prevRef = useRef();
     const [productValue, setProductValue] = useState(1);
     const [prevProductValue, setPrevProductValue] = useState(1);
-    console.log(productValue);
+
     function changeValueProductNext() {
         setProductValue((prev) => {
             setPrevProductValue(prev);
             return Number(productValue + 1);
         });
     }
+
     function changeValueProductPrev() {
         setProductValue((prev) => {
             if (productValue > 0) {

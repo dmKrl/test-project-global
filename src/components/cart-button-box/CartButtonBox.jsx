@@ -5,9 +5,11 @@ import { clearAllProductBasket } from "../../redux/slices/basketSlice";
 
 const CartButtonBox = () => {
     const dispatch = useDispatch();
+
     function deleteAllCards() {
         dispatch(clearAllProductBasket());
     }
+
     return (
         <div className={s.cartButtonBox}>
             <button className={s.formSubmit} onClick={deleteAllCards}>

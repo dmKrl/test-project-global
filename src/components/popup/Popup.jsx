@@ -7,11 +7,12 @@ import {
 
 const Popup = () => {
     const isShowingPopup = useSelector(selectIsShowingPopup);
-    console.log(isShowingPopup);
     const dispatch = useDispatch();
+
     function changeIsShowing() {
         dispatch(setIsShowingPopup());
     }
+
     return (
         <div
             className={

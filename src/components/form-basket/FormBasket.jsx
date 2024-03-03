@@ -20,11 +20,13 @@ const FormBasket = () => {
     } = useForm({
         mode: "onBlur",
     });
+
     function onSubmit() {
         dispatch(setIsShowingPopup());
         dispatch(clearAllProductBasket());
         reset();
     }
+
     return (
         <form className={s.form} onSubmit={handleSubmit(onSubmit)}>
             <input

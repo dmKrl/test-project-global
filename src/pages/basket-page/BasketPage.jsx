@@ -8,7 +8,6 @@ import { selectProductBasket } from "../../redux/slices/basketSlice";
 
 const BasketPage = () => {
     const productBasket = useSelector(selectProductBasket);
-    console.log(productBasket);
 
     return (
         <div className={s.cart}>

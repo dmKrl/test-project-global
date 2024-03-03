@@ -3,10 +3,13 @@ import s from "./Header.module.css";
 
 const Header = () => {
     const location = useLocation();
+
     return (
         <div
             className={
-                location.pathname === "/" ? `${s.header} ${s.headerCatalog}` : `${s.header} ${s.headerBasket}`
+                location.pathname === "/"
+                    ? `${s.header} ${s.headerCatalog}`
+                    : `${s.header} ${s.headerBasket}`
             }
         >
             <div className={s.headerContainer}>
